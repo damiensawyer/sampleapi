@@ -23,3 +23,4 @@ C:\Temp\code\sampleapi\obj\Debug\net8.0\refint\sampleapi.dll
 C:\Temp\code\sampleapi\obj\Debug\net8.0\sampleapi.pdb
 C:\Temp\code\sampleapi\obj\Debug\net8.0\sampleapi.genruntimeconfig.cache
 C:\Temp\code\sampleapi\obj\Debug\net8.0\ref\sampleapi.dll
+C:\temp\code\sampleapi\obj\Debug\net8.0\sampleapi.sourcelink.json

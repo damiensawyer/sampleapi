@@ -1,17 +1,15 @@
 using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Json;
 
-var builder = WebApplication.CreateSlimBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<JsonOptions>(options =>
 {
-    // Never seem to come in here. 
-    options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals;
+    options.SerializerOptions.NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals;
 });
 
 var app = builder.Build();
 
-app.MapGet("/", () => Results.Ok(new{value=double.PositiveInfinity}));
+app.MapGet("/", () => Results.Ok(new { value = double.PositiveInfinity }));
 
 app.Run();
-
